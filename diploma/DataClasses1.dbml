@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="bookstore" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-OFJ100G\SQLEXPRESS;Initial Catalog=bookstore;Integrated Security=True" SettingsObjectName="diploma.Properties.Settings" SettingsPropertyName="bookstoreConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.genres" Member="genres">
+    <Type Name="genres">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="genrename" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.completeorders" Member="completeorders">
+    <Type Name="completeorders">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="bookname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="price" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="selltime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.orders" Member="orders">
+    <Type Name="orders">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ordernumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bookname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="price" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="customername" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="orderadress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="paymentmethod" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="deliverymethod" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="orderstatus" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.webbookstore" Member="webbookstore">
+    <Type Name="webbookstore">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="bookname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="price" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="descrip" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="genre" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="stock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="releasedate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="imagename" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+</Database>
